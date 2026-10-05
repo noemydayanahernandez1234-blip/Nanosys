@@ -1,0 +1,597 @@
+<!DOCTYPE HTML>
+<!--
+	Multiverse by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Nanosys | Innovación en Nanotecnología Avanzada</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<!-- Aquí iría tu enlace al CSS original, pero estamos sobreescribiendo todo abajo -->
+		<!-- <link rel="stylesheet" href="assets/css/main.css" /> -->
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		
+		<!-- Estilos Ultra Modernos, Tecnológicos y Transparentes (INTEGRADOS) -->
+		<style>
+			/* Importación de fuente profesional */
+			@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap');
+
+			/* --- RESET BÁSICO Y TIPOGRAFÍA --- */
+			html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+				margin: 0; padding: 0; border: 0; font-size: 100%; font: inherit; vertical-align: baseline;
+			}
+			article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { display: block; }
+			body { line-height: 1; }
+			ol, ul { list-style: none; }
+			blockquote, q { quotes: none; }
+			blockquote:before, blockquote:after, q:before, q:after { content: ''; content: none; }
+			table { border-collapse: collapse; border-spacing: 0; }
+
+			/* Aplicar fuente globalmente */
+			body, input, textarea, select, button, h1, h2, h3, h4, h5, h6, p {
+				font-family: 'Outfit', sans-serif !important;
+				box-sizing: border-box;
+			}
+
+			/* --- FONDO TECNOLÓGICO Y ESTRUCTURA --- */
+			body.is-preload {
+				background-color: #020617 !important;
+			}
+			
+			body {
+				background-color: #020617;
+			}
+
+			#wrapper {
+				/* Fondo degradado principal */
+				background: radial-gradient(circle at 50% 15%, #1e1b4b 0%, #090d16 55%, #020617 100%) !important;
+				position: relative;
+				display: flex;
+				flex-direction: column;
+				min-height: 100vh;
+			}
+
+			/* Patrón de ciber-grilla transparente y tecnológica */
+			#wrapper::before {
+				content: "";
+				position: absolute;
+				top: 0; left: 0; right: 0; bottom: 0;
+				background-image: 
+					radial-gradient(rgba(0, 255, 204, 0.15) 1.5px, transparent 1.5px),
+					linear-gradient(to right, rgba(0, 255, 204, 0.03) 1px, transparent 1px),
+					linear-gradient(to bottom, rgba(0, 255, 204, 0.03) 1px, transparent 1px);
+				background-size: 40px 40px, 80px 80px, 80px 80px;
+				pointer-events: none;
+				z-index: 0; /* Detrás de todo */
+			}
+
+			/* --- HEADER --- */
+			#header {
+				background: rgba(3, 7, 18, 0.75) !important;
+				backdrop-filter: blur(16px);
+				border-bottom: 1px solid rgba(0, 255, 204, 0.35);
+				box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+				padding: 2.5em 4em;
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				position: sticky;
+				top: 0;
+				z-index: 100;
+				width: 100%;
+			}
+			
+			#header h1 {
+				font-size: 1.2em;
+				line-height: 1;
+				margin: 0;
+			}
+
+			#header h1 a {
+				color: #00ffcc !important;
+				font-weight: 700;
+				text-shadow: 0 0 12px rgba(0, 255, 204, 0.4);
+				text-decoration: none;
+				transition: color 0.2s ease;
+			}
+			
+			#header h1 a strong {
+				color: #00ffcc;
+				font-weight: 800;
+			}
+
+			#header nav ul {
+				display: flex;
+				margin: 0;
+				padding: 0;
+			}
+			
+			#header nav ul li {
+				margin-left: 1.5em;
+				padding: 0;
+			}
+
+			#header nav ul li a {
+				color: #cbd5e1;
+				text-decoration: none;
+				font-size: 1em;
+				font-weight: 500;
+				transition: color 0.2s ease;
+				position: relative;
+			}
+
+			#header nav ul li a:hover {
+				color: #00ffcc;
+			}
+
+			/* --- MAIN (Galería) --- */
+			#main {
+				position: relative;
+				z-index: 5;
+				padding: 4em 5% 2em 5%;
+				display: grid;
+				grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+				gap: 25px;
+				max-width: 1400px;
+				margin: 0 auto;
+				flex: 1;
+				width: 100%;
+			}
+
+			/* Tarjeta de Video Superior (Ancho completo) */
+			.thumb-video-card {
+				grid-column: 1 / -1;
+				background: rgba(15, 23, 42, 0.75);
+				border-radius: 16px;
+				border: 1px solid rgba(0, 255, 204, 0.4);
+				box-shadow: 0 15px 45px rgba(0, 0, 0, 0.6), 0 0 20px rgba(0, 255, 204, 0.15);
+				padding: 30px;
+				backdrop-filter: blur(16px);
+				margin-bottom: 25px !important;
+			}
+			
+			.thumb-video-card h2 {
+				color: #00ffcc !important;
+				font-size: 1.6rem;
+				font-weight: 700;
+				margin-bottom: 20px;
+				text-align: center;
+				text-shadow: 0 0 10px rgba(0, 255, 204, 0.4);
+				letter-spacing: 0.5px;
+			}
+
+			.video-wrapper-pro {
+				position: relative;
+				padding-bottom: 52%; /* Aspecto 16:9 */
+				height: 0;
+				overflow: hidden;
+				border-radius: 12px;
+				box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
+				border: 1px solid rgba(255, 255, 255, 0.1);
+				background: #000;
+			}
+			
+			.video-wrapper-pro iframe {
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				border: 0;
+			}
+
+			/* Tarjetas de galería (Thumbs) */
+			#main .thumb {
+				border-radius: 14px;
+				overflow: hidden;
+				border: 1px solid rgba(255, 255, 255, 0.1);
+				box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+				transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+				background: rgba(15, 23, 42, 0.65);
+				backdrop-filter: blur(10px);
+				text-decoration: none;
+				display: flex;
+				flex-direction: column;
+				padding-bottom: 15px;
+				position: relative;
+			}
+			
+			#main .thumb:hover {
+				transform: translateY(-8px) scale(1.01);
+				border-color: rgba(0, 255, 204, 0.7);
+				box-shadow: 0 20px 50px rgba(0, 0, 0, 0.7), 0 0 25px rgba(0, 255, 204, 0.3);
+				background: rgba(15, 23, 42, 0.85);
+			}
+
+			#main .thumb .image {
+				position: relative;
+				display: block;
+				width: 100%;
+				height: 180px;
+				overflow: hidden;
+				background: #090d16;
+				border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+			}
+
+			#main .thumb .image img {
+				position: absolute;
+				top: 0; left: 0;
+				width: 100%; height: 100%;
+				object-fit: cover;
+				transition: transform 0.5s ease;
+			}
+			
+			#main .thumb:hover .image img {
+				transform: scale(1.05);
+			}
+
+			#main .thumb h2 {
+				color: #00ffcc !important;
+				font-size: 1.2rem;
+				font-weight: 700;
+				margin: 15px 15px 5px 15px !important;
+				text-shadow: 0 2px 8px rgba(0, 0, 0, 0.9);
+			}
+
+			#main .thumb p {
+				color: #cbd5e1 !important;
+				font-size: 0.95rem;
+				font-weight: 300;
+				margin: 0 15px 15px 15px !important;
+				line-height: 1.5;
+			}
+
+			/* --- FOOTER (Completamente corregido y transparente) --- */
+			#footer {
+				position: relative !important;
+				top: auto !important; left: auto !important;
+				width: 100% !important;
+				height: auto !important;
+				min-height: 0 !important;
+				max-height: none !important;
+				
+				/* Fondo integrado y translúcido */
+				background: rgba(15, 23, 42, 0.65) !important;
+				backdrop-filter: blur(16px);
+				
+				/* Borde superior brillante */
+				border-top: 2px solid rgba(0, 255, 204, 0.6) !important;
+				box-shadow: 0 -15px 50px rgba(0, 255, 204, 0.15), 0 10px 40px rgba(0, 0, 0, 0.8) !important;
+				
+				padding: 50px 40px !important;
+				display: block !important;
+				margin-top: 50px;
+			}
+
+			/* Contenedor interno */
+			#footer .inner.split {
+				display: flex;
+				flex-wrap: wrap;
+				gap: 40px;
+				max-width: 1400px;
+				margin: 0 auto;
+				justify-content: space-between;
+			}
+
+			/* Ajuste para asegurar que las columnas internas hereden transparencia */
+			#footer .inner.split > * {
+				flex: 1;
+				min-width: 300px;
+				background: transparent !important;
+				position: relative;
+				z-index: 2;
+			}
+
+			/* Tarjeta de cristal para el formulario */
+			.footer-contact-box {
+				background: rgba(2, 6, 23, 0.5);
+				padding: 30px;
+				border-radius: 14px;
+				border: 1px solid rgba(0, 255, 204, 0.3);
+				box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5), inset 0 0 15px rgba(0, 255, 204, 0.05);
+				backdrop-filter: blur(12px);
+			}
+
+			#footer h2 {
+				color: #00ffcc !important;
+				font-weight: 700;
+				font-size: 1.3em;
+				margin-bottom: 1em;
+				text-shadow: 0 0 10px rgba(0, 255, 204, 0.3);
+			}
+			
+			#footer p {
+				color: #cbd5e1 !important;
+				font-size: 1em;
+				line-height: 1.6;
+				margin-bottom: 1.5em;
+			}
+
+			/* Formulario */
+			#footer .fields {
+				display: flex;
+				flex-direction: column;
+				gap: 15px;
+			}
+			
+			#footer .field.half {
+				display: inline-block;
+				width: 49%;
+			}
+			
+			#footer .field.half:nth-child(odd) {
+				margin-right: 2%;
+			}
+
+			#footer input[type="text"], 
+			#footer textarea {
+				width: 100%;
+				background: rgba(255, 255, 255, 0.05) !important;
+				border: 1px solid rgba(0, 255, 204, 0.3) !important;
+				color: #ffffff !important;
+				border-radius: 10px;
+				padding: 12px;
+				transition: all 0.3s ease;
+				font-size: 1em;
+				box-sizing: border-box;
+			}
+			
+			#footer textarea {
+				min-height: 100px;
+				resize: vertical;
+			}
+
+			#footer input[type="text"]:focus, 
+			#footer textarea:focus {
+				border-color: #00ffcc !important;
+				box-shadow: 0 0 20px rgba(0, 255, 204, 0.5), inset 0 0 5px rgba(0, 255, 204, 0.2) !important;
+				background: rgba(255, 255, 255, 0.1) !important;
+				outline: none;
+			}
+
+			#footer .actions {
+				list-style: none;
+				padding: 0;
+				margin-top: 20px;
+				display: flex;
+				gap: 15px;
+			}
+
+			#footer input[type="submit"].primary {
+				background: linear-gradient(135deg, #00ffcc 0%, #00b38f 100%) !important;
+				color: #020617 !important;
+				font-weight: 700;
+				border-radius: 10px;
+				box-shadow: 0 6px 20px rgba(0, 255, 204, 0.4);
+				transition: all 0.3s ease;
+				border: none;
+				padding: 12px 25px;
+				cursor: pointer;
+			}
+			
+			#footer input[type="submit"].primary:hover {
+				transform: translateY(-3px);
+				box-shadow: 0 8px 25px rgba(0, 255, 204, 0.6);
+			}
+
+			#footer input[type="reset"] {
+				background: rgba(255, 255, 255, 0.05) !important;
+				border: 1px solid rgba(255, 255, 255, 0.2) !important;
+				color: #cbd5e1 !important;
+				padding: 12px 20px;
+				border-radius: 8px;
+				cursor: pointer;
+				transition: 0.3s;
+				font-weight: 600;
+			}
+			
+			#footer input[type="reset"]:hover {
+				border-color: #ec4899;
+				color: #fff;
+				background: rgba(236, 72, 153, 0.15);
+			}
+
+			/* Íconos sociales */
+			#footer .icons {
+				margin-top: 20px;
+				display: flex;
+				gap: 15px;
+				padding: 0;
+			}
+			
+			#footer .icons a {
+				color: #cbd5e1 !important;
+				font-size: 1.2em;
+				transition: all 0.3s ease;
+				text-decoration: none;
+			}
+			
+			#footer .icons a:hover {
+				color: #00ffcc !important;
+				text-shadow: 0 0 10px rgba(0, 255, 204, 0.8);
+			}
+
+			/* Copyright y Crédito de autoría */
+			.copyright {
+				margin-top: 20px;
+				font-size: 0.9em;
+				color: #94a3b8 !important;
+				border-top: 1px solid rgba(255,255,255,0.1);
+				padding-top: 15px;
+			}
+			
+			.author-credit {
+				display: block;
+				margin-top: 10px;
+				font-size: 1rem;
+				color: #00ffcc;
+				font-weight: 600;
+				letter-spacing: 0.8px;
+				text-shadow: 0 0 10px rgba(0, 255, 204, 0.3);
+			}
+
+			/* --- RESPONSIVE (Adaptación para móviles) --- */
+			@media screen and (max-width: 736px) {
+				#header { padding: 1.5em 2em; flex-direction: column; gap: 10px; text-align: center; }
+				#header nav ul li { margin: 0 10px; }
+				#main { padding: 2em 1em; grid-template-columns: 1fr; }
+				.thumb-video-card { padding: 15px; }
+				.video-wrapper-pro { padding-bottom: 56.25%; }
+				#footer { padding: 30px 20px !important; }
+				#footer .inner.split { gap: 30px; }
+				#footer .field.half { width: 100%; margin-right: 0; }
+			}
+		</style>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper (Fondo y Rejilla aplicados aquí) -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<h1><a href="index.html"><strong>Nanosys</strong> | Nanotecnología Avanzada</a></h1>
+						<nav>
+							<ul>
+								<li><a href="#footer" class="icon solid fa-info-circle">Contacto & Empresa</a></li>
+							</ul>
+						</nav>
+					</header>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Tarjeta de Video Integrada Superior (Ancho Completo) -->
+						<div class="thumb-video-card">
+							<h2>Presentación Corporativa: El Futuro de la Nanotecnología</h2>
+							<div class="video-wrapper-pro">
+								<iframe src="https://www.youtube-nocookie.com/embed/9lFpwYlxevs" title="Video de Nanotecnología" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+							</div>
+						</div>
+
+						<!-- Tarjetas de Galería -->
+						<article class="thumb">
+							<a href="images/fulls/01.jpg" class="image"><img src="images/thumbs/01.jpg" alt="Nanomedicina" /></a>
+							<h2>Nanomedicina</h2>
+							<p>Nanorobots diseñados para la detección temprana de células cancerosas y liberación dirigida de fármacos.</p>
+						</article>
+						<article class="thumb">
+							<a href="images/fulls/02.jpg" class="image"><img src="images/thumbs/02.jpg" alt="Nanomateriales" /></a>
+							<h2>Nanomateriales</h2>
+							<p>Creación de materiales ultraligeros, altamente resistentes y con propiedades térmicas avanzadas.</p>
+						</article>
+						<article class="thumb">
+							<a href="images/fulls/03.jpg" class="image"><img src="images/thumbs/03.jpg" alt="Electrónica Molecular" /></a>
+							<h2>Electrónica Molecular</h2>
+							<p>Desarrollo de transistores y circuitos a nanoescala para procesadores más rápidos y eficientes.</p>
+						</article>
+						<article class="thumb">
+							<a href="images/fulls/04.jpg" class="image"><img src="images/thumbs/04.jpg" alt="Purificación de Agua" /></a>
+							<h2>Purificación de Agua</h2>
+							<p>Uso de membranas con nanotubos de carbono para desalinizar y eliminar contaminantes microscópicos.</p>
+						</article>
+						<article class="thumb">
+							<a href="images/fulls/05.jpg" class="image"><img src="images/thumbs/05.jpg" alt="Energía Solar Avanzada" /></a>
+							<h2>Energía Solar Avanzada</h2>
+							<p>Celdas fotovoltaicas de nueva generación que aprovechan la nanotecnología para capturar mayor energía.</p>
+						</article>
+						<article class="thumb">
+							<a href="images/fulls/06.jpg" class="image"><img src="images/thumbs/06.jpg" alt="Almacenamiento de Energía" /></a>
+							<h2>Almacenamiento de Energía</h2>
+							<p>Baterías de ion-litio mejoradas con nanomateriales para una carga ultra rápida y mayor duración.</p>
+						</article>
+						<article class="thumb">
+							<a href="images/fulls/07.jpg" class="image"><img src="images/thumbs/07.jpg" alt="Textiles Inteligentes" /></a>
+							<h2>Textiles Inteligentes</h2>
+							<p>Ropa repelente de manchas, con control térmico y capacidad de monitoreo de signos vitales.</p>
+						</article>
+						<article class="thumb">
+							<a href="images/fulls/08.jpg" class="image"><img src="images/thumbs/08.jpg" alt="Computación Cuántica" /></a>
+							<h2>Computación Cuántica</h2>
+							<p>Integración de componentes a nanoescala para potenciar la potencia de procesamiento de datos.</p>
+						</article>
+						<article class="thumb">
+							<a href="images/fulls/09.jpg" class="image"><img src="images/thumbs/09.jpg" alt="Ingeniería de Tejidos" /></a>
+							<h2>Ingeniería de Tejidos</h2>
+							<p>Andamios nanométricos que facilitan la regeneración de huesos, cartílagos y piel artificial.</p>
+						</article>
+						<article class="thumb">
+							<a href="images/fulls/10.jpg" class="image"><img src="images/thumbs/10.jpg" alt="Sensores Químicos" /></a>
+							<h2>Sensores Químicos</h2>
+							<p>Dispositivos capaces de detectar sustancias tóxicas o gases peligrosos en concentraciones mínimas.</p>
+						</article>
+						<article class="thumb">
+							<a href="images/fulls/06.jpg" class="image"><img src="images/thumbs/06.jpg" alt="Cosmética Avanzada" /></a>
+							<h2>Cosmética Avanzada</h2>
+							<p>Uso de nanocápsulas para que los productos de cuidado de la piel penetren de manera más efectiva.</p>
+						</article>
+						<article class="thumb">
+							<a href="images/fulls/10.jpg" class="image"><img src="images/thumbs/10.jpg" alt="El Futuro Nano" /></a>
+							<h2>El Futuro Nano</h2>
+							<p>Exploración continua de nuevas fronteras científicas para transformar la industria global.</p>
+						</article>
+					</div>
+
+				<!-- Footer CORREGIDO Y TRANSPARENTE -->
+					<footer id="footer">
+						<div class="inner split">
+							<div>
+								<section>
+									<h2>Acerca de Nanosys</h2>
+									<p>Nanosys es una de las empresas líderes a nivel mundial en el desarrollo y comercialización de tecnologías basadas en nanomateriales y puntos cuánticos, transformando industrias enteras como las pantallas de alta definición y la electrónica de consumo con innovación sostenible.</p>
+								</section>
+								<section>
+									<h2>Síguenos en...</h2>
+									<ul class="icons">
+										<li><a href="#" class="icon brands fa-twitter" title="Twitter"><span class="label">Twitter</span></a></li>
+										<li><a href="#" class="icon brands fa-facebook-f" title="Facebook"><span class="label">Facebook</span></a></li>
+										<li><a href="#" class="icon brands fa-instagram" title="Instagram"><span class="label">Instagram</span></a></li>
+										<li><a href="#" class="icon brands fa-github" title="GitHub"><span class="label">GitHub</span></a></li>
+										<li><a href="#" class="icon brands fa-linkedin-in" title="LinkedIn"><span class="label">LinkedIn</span></a></li>
+									</ul>
+								</section>
+								<p class="copyright">
+									&copy; Nanosys Tech. Design: <a href="http://html5up.net" style="color: #00ffcc; text-decoration: none;">HTML5 UP</a>.<br>
+									<span class="author-credit">Elaborado por: Dayana Noemy Lopez Hernandez</span>
+								</p>
+							</div>
+							<div>
+								<!-- Formulario con tarjeta de cristal -->
+								<section class="footer-contact-box">
+									<h2>Contáctanos</h2>
+									<form method="post" action="#">
+										<div class="fields">
+											<div class="field half">
+												<input type="text" name="name" id="name" placeholder="Nombre" />
+											</div>
+											<div class="field half">
+												<input type="text" name="email" id="email" placeholder="Correo" />
+											</div>
+											<div class="field">
+												<textarea name="message" id="message" rows="4" placeholder="Mensaje"></textarea>
+											</div>
+										</div>
+										<ul class="actions">
+											<li><input type="submit" value="Enviar Mensaje" class="primary" /></li>
+											<li><input type="reset" value="Borrar" /></li>
+										</ul>
+									</form>
+								</section>
+							</div>
+						</div>
+					</footer>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.poptrox.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
